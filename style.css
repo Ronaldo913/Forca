@@ -1,76 +1,100 @@
 body{
+    /* definindo tamanho */
     height: 100vh;
+    /* tirando as margens */
     margin: 0;
+    /* escolha da fonte */
     font-family: 'Consolas', Arial, Helvetica, sans-serif;
 }
 
+/* div em que o site está envolvido */
 #jogo-forca{
+    /* deixando div flexiva */
     display: flex;
+    /* deixando as 3 estruturas: header, main e footer ocupando a página toda */
+    /* deixando tudo que está nesta div em coluna */
     flex-flow: column;
+    /* definindo tamanho */
     height: 100vh;
 }
 
+/* div do título */
 #jogo-forca #titulo{
+    /* deixando as 3 estruturas: header, main e footer ocupando a página toda */
     flex-grow: 0;
     flex-basis: auto;
+    /* definindo tamanho */
     height: 100px;
 
+    /* deixando div flexível */
     display: flex;
+    /* alinhando título */
     justify-content: center;
     align-items: center;
 
+    /* colocando um margem para separa o título da main */
     margin-bottom: 20px;
 }
 
+/* título está em h1 */
 #jogo-forca #titulo h1{
+    /* definindo tamanho da fonte do título */
     font-size: 48px;
+    /* definindo cor da fonte */
     color: #0b4619;
+    /* deixando todo texto em maiúsculo */
     text-transform: uppercase;
 }
 
+/* onde o jogo está */
 #jogo-forca #corpo{
+    /* deixando as 3 estruturas: header, main e footer ocupando a página toda */
     flex-grow: 1;
     flex-basis: auto;
 }
 
+/* espaço onde está a forca, a palavra e a opção de novo jogo */
 #jogo-forca #corpo #jogo{
+    /* deixando div flexível */
     display: flex;
+    /* definindo espaço da forca, da palava sorteada e do novo jogo */
     justify-content: space-between;
 }
 
-#jogo-forca #corpo #palavra{
+/* palavra sorteada */
+#jogo-forca #corpo #jogo #palavra{
+    /* deixando div flexível */
     display: flex;
+    /* centralizando palavra */
     justify-content: center;
+    /* colocando palavra na parte de baixo */
+    align-items: flex-end;
+
+    /* deixando letra uma ao lado da outra */
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
 }
 
-#jogo-forca #corpo #novo{
+/* opção de novo jogo */
+#jogo-forca #corpo #jogo #novo{
+    /* deixando div flexível */
     display: flex;
+    /* centralizando o a opção de novo jogo */
     justify-content: center;
     align-items: center;
 }
 
-#jogo-forca #rodape{
-    flex-grow: 0;
-    flex-basis: 100px; 
-
+/* espaço a letras estarão para serem selecionadas */
+#jogo-forca #corpo #letras{
+    /* deixando div flexiva */
     display: flex;
+    /* alinhando */
     justify-content: center;
-    align-items: flex-end;
-}
-
-.flex-container-3 {
-    display: flex;
-    justify-content: center;
+    /* deixando letra ao lado da outra */
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 40px;
-}
-
-p {
-    font-size: 20px;
+    /* definindo espaço entre a primeira parte do jogo */
+    padding-top: 110px;
 }
 
 span {
@@ -121,3 +145,15 @@ button.novo-bt {
     border: 1px solid #DC1F27;
     cursor: inherit;
 }
+    #jogo-forca #rodape{
+        flex-grow: 0;
+        flex-basis: 100px; 
+    
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    
+        font-size: 20px;
+        color: #0b4619;
+        text-transform: uppercase;
+    }
