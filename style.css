@@ -1,4 +1,4 @@
-body{
+body {
     /* definindo tamanho */
     height: 100vh;
     /* tirando as margens */
@@ -8,7 +8,7 @@ body{
 }
 
 /* div em que o site está envolvido */
-#jogo-forca{
+#jogo-forca {
     /* deixando div flexiva */
     display: flex;
     /* deixando as 3 estruturas: header, main e footer ocupando a página toda */
@@ -19,7 +19,7 @@ body{
 }
 
 /* div do título */
-#jogo-forca #titulo{
+#jogo-forca #titulo {
     /* deixando as 3 estruturas: header, main e footer ocupando a página toda */
     flex-grow: 0;
     flex-basis: auto;
@@ -37,7 +37,7 @@ body{
 }
 
 /* título está em h1 */
-#jogo-forca #titulo h1{
+#jogo-forca #titulo h1 {
     /* definindo tamanho da fonte do título */
     font-size: 48px;
     /* definindo cor da fonte */
@@ -47,14 +47,14 @@ body{
 }
 
 /* onde o jogo está */
-#jogo-forca #corpo{
+#jogo-forca #corpo {
     /* deixando as 3 estruturas: header, main e footer ocupando a página toda */
     flex-grow: 1;
     flex-basis: auto;
 }
 
 /* espaço onde está a forca, a palavra e a opção de novo jogo */
-#jogo-forca #corpo #jogo{
+#jogo-forca #corpo #jogo {
     /* deixando div flexível */
     display: flex;
     /* definindo espaço da forca, da palava sorteada e do novo jogo */
@@ -62,7 +62,7 @@ body{
 }
 
 /* palavra sorteada */
-#jogo-forca #corpo #jogo #palavra{
+#jogo-forca #corpo #jogo #palavra {
     /* deixando div flexível */
     display: flex;
     /* centralizando palavra */
@@ -76,16 +76,16 @@ body{
 }
 
 /* opção de novo jogo */
-#jogo-forca #corpo #jogo #novo{
+#jogo-forca #corpo #jogo #novo {
     /* deixando div flexível */
     display: flex;
     /* centralizando o a opção de novo jogo */
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 /* espaço a letras estarão para serem selecionadas */
-#jogo-forca #corpo #letras{
+#jogo-forca #corpo #letras {
     /* deixando div flexiva */
     display: flex;
     /* alinhando */
@@ -109,24 +109,36 @@ span {
     text-transform: uppercase;
 }
 
+/* botões das letras */
 button {
+    /* deixando flexivo */
     display: flex;
+    /* centralizando-os */
     justify-content: center;
+    /* definindo margem, largura e padding */
     margin: 5px;
     width: 35px;
     padding: 10px 0;
-    background-color: #00698C;
+
+    /* definindo cor dos botões e das fontes das letras dos botões */
+    background-color: #0b4619;
     color: #FFFFFF;
-    border: 1px solid #00698C;
+
+    /* definindo questões de borda */
+    border: 1px solid #0b4619;
     border-radius: 5px;
+
+    /* definindo questões de fontes */
     font-weight: bold;
     font-size: 18px;
+
+    /* deixando cursor como pointer e texto em maiúsculo */
     cursor: pointer;
     text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #0682ac;
+    background-color: #0f6623;
 }
 
 button.novo-bt {
@@ -134,26 +146,29 @@ button.novo-bt {
     padding: 10px;
 }
 
-.certa, .certa:hover {
-    background: #0682ac;
-    border: 1px solid #0682ac;
+.certa,
+.certa:hover {
+    background: #0f6623;
+    border: 1px solid #0f6623;
     cursor: inherit;
 }
 
-.errada, .errada:hover {
-    background: #DC1F27;
-    border: 1px solid #DC1F27;
+.errada,
+.errada:hover {
+    background: #6a0180;
+    border: 1px solid #6a0180;
     cursor: inherit;
 }
-    #jogo-forca #rodape{
-        flex-grow: 0;
-        flex-basis: 100px; 
-    
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    
-        font-size: 20px;
-        color: #0b4619;
-        text-transform: uppercase;
-    }
+
+#jogo-forca #rodape {
+    flex-grow: 0;
+    flex-basis: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-size: 20px;
+    color: #0b4619;
+    text-transform: uppercase;
+}
