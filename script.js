@@ -18,11 +18,17 @@ let imagem = 0;
 // auxiliar
 let posicao;
 
+// manipulando o dom
 for (posicao = 0; posicao < palavra.length; posicao++) {
+    // criando variável span e o atribue o elemento span
     let span = document.createElement("span");
+    // colocando id nas span com o número da posição da letra na palavra
+    // ex.: <span id="1"> </span>
     span.setAttribute('id', posicao);
 
+    // criando variável div e o atribue o elemento que tem o id palavra
     let div = document.getElementById("palavra");
+    // adicionando o span dentro da div criada anteriormente com o appenChild
     div.appendChild(span);
 }
 
