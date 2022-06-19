@@ -33,31 +33,31 @@ body{
     flex-basis: auto;
 }
 
+#jogo-forca #corpo #jogo{
+    display: flex;
+    justify-content: space-between;
+}
+
+#jogo-forca #corpo #palavra{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+#jogo-forca #corpo #novo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #jogo-forca #rodape{
     flex-grow: 0;
     flex-basis: 100px; 
 
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-}
-
-
-.flex-container-1 {
-    display: flex;
-    justify-content: center;
-}
-
-.flex-container-2 {
-    display: flex;
-    justify-content: center;
-}
-
-.flex-container-2-2 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: flex-end;
 }
 
