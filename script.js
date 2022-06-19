@@ -7,11 +7,15 @@ let palavras = ["programa", "html", "css", "bootstrap", "cliente", "aprender", "
 // Math.floor arredonda o número
 let palavra = palavras[Math.floor(Math.random() * palavras.length)];
 
+// números de chances
 let chances = 6;
+// números de acertos
 let acertos = 0;
 
+// qual imagem a aparecerá conforme os erros
 let imagem = 0;
 
+// auxiliar
 let posicao;
 
 for (posicao = 0; posicao < palavra.length; posicao++) {
@@ -22,7 +26,9 @@ for (posicao = 0; posicao < palavra.length; posicao++) {
     div.appendChild(span);
 }
 
+// atribuindo uma string com todas a letras do alfabeto
 let alfabeto = "abcdefghijklmnopqrstuvwxyz";
+// separando as letras da string anterior pelo .split
 let letras = alfabeto.split("");
 
 for (posicao = 0; posicao < letras.length; posicao++) {
