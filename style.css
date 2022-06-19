@@ -61,6 +61,10 @@ body {
     justify-content: space-between;
 }
 
+#jogo-forca #corpo #jogo #forca{
+    padding-left: 40px;
+}
+
 /* palavra sorteada */
 #jogo-forca #corpo #jogo #palavra {
     /* deixando div flexível */
@@ -73,6 +77,8 @@ body {
     /* deixando letra uma ao lado da outra */
     flex-direction: row;
     flex-wrap: wrap;
+
+    padding-right: 70px;
 }
 
 /* opção de novo jogo */
@@ -82,6 +88,8 @@ body {
     /* centralizando o a opção de novo jogo */
     justify-content: center;
     align-items: flex-end;
+
+    padding-right: 60px;
 }
 
 /* espaço a letras estarão para serem selecionadas */
