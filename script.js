@@ -4,7 +4,7 @@ let palavras = ["programa", "html", "css", "bootstrap", "cliente", "aprender", "
 // palavra = a palavra sorteada da lista palavras
 // Math.random sortea aleatoriamente uma posição que vai até o quantidade de posições da lista
 // .length tem a quantidade de posição da lista palavras
-// Math.floor 
+// Math.floor arredonda o número
 let palavra = palavras[Math.floor(Math.random() * palavras.length)];
 
 let chances = 6;
