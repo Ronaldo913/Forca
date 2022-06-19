@@ -137,6 +137,7 @@ button {
     text-transform: uppercase;
 }
 
+/* quando o ponteiro estiver sobre o botão e cor passará ser a determinada abaixo */
 button:hover {
     background-color: #0f6623;
 }
@@ -146,28 +147,37 @@ button.novo-bt {
     padding: 10px;
 }
 
+/* se a palavra tiver a letra escolhida o botão fica com a cor determinada abaixo */
 .certa,
 .certa:hover {
     background: #0f6623;
     border: 1px solid #0f6623;
+    /* e o cursor muda */
     cursor: inherit;
 }
 
+/* se a palavra não tiver a letra escolhida o botão fica com a cor determinada abaixo */
 .errada,
 .errada:hover {
     background: #6a0180;
     border: 1px solid #6a0180;
+    /* e o cursor muda */
     cursor: inherit;
 }
 
+/* rodapé do jogo */
 #jogo-forca #rodape {
+    /* deixando as 3 estruturas: header, main e footer ocupando a página toda */
     flex-grow: 0;
     flex-basis: 100px;
 
+    /* deixando flexivo */
     display: flex;
+    /* alinhando */
     justify-content: center;
     align-items: flex-end;
 
+    /* questões de fonte */
     font-size: 20px;
     color: #0b4619;
     text-transform: uppercase;
