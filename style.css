@@ -113,13 +113,21 @@ body {
     padding-top: 110px;
 }
 
+/* letras da palavra sorteada */
 span {
+    /* deixando flexivo */
     display: flex;
+    /* centralizando */
     justify-content: center;
+    /* colocando uma borda na parte de baixo que é o traço da letra */
     border-bottom: 3px solid #DC1F27;
+    /* definindo largura */
     width: 40px;
+    /* definindo margem */
     margin: 5px;
+    /* definindo paddind */
     padding-bottom: 10px;
+    /* ajeitando o fonte das letras */
     font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
