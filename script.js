@@ -79,8 +79,11 @@ function escolheLetra(letra) {
             // adicionando ao span a letra que está em na variável l
             span.appendChild(l);
 
+            // botão com a letra em questão
             let botao = document.getElementById(letra);
+            // atribuindo a este botão uma classe com o nome certa indicando que a letra desse botão foi a certa
             botao.setAttribute('class', 'certa');
+            // removendo o onclick porque a letra já foi escolhida e acertada
             botao.removeAttribute('onclick');
 
             acertos++;
@@ -88,27 +91,44 @@ function escolheLetra(letra) {
         }
     }
 
+    // se errou a letra
     if (acertou === false) {
+
+        // a imagem vai subir 1 valor
         imagem++;
+        // e a imagem mudar conforme o erro
         document.getElementById("forca").src = "images/forca-"+imagem+".jpg";
 
+        // botão com a letra em questão
         var botao = document.getElementById(letra);
+        // atribuindo a este botão uma classe com o nome errada indicando que a letra desse botão foi a errada
         botao.setAttribute('class', 'errada');
+        // removendo o onclick porque a letra já foi escolhida e errada
         botao.removeAttribute('onclick');
 
+        // chances vai diminuindo
         chances--;
     }
 
+    // se as chances chegarem a 0, então perdeu o perdeu o jogo
     if (chances === 0) {
+        // criando variável mensagem e atribuindo-o o elemento p 
         let mensagem = document.createElement("p");
+        // criando variável t1 para ter a frase quando o usuário perder
         let t1 = document.createTextNode("Você perdeu!");
+        // inserindo ao p a string de t1
         mensagem.appendChild(t1);
 
+        // criando variável botao e atribuindo-o o elemento button para jogar novamente
         let botao = document.createElement("button");
+        // criando variável t2 e o atribuindo a string jogar novamente
         let t2 = document.createTextNode("jogar novamente");
         
+        // adicionando ao botão a string de t2
         botao.appendChild(t2);
+        // atribuindo ao botão um class com o nome novo-bt
         botao.setAttribute('class', 'novo-bt');
+        // atribuindo ao botão o onclick com a função de recarregar a página 
         botao.setAttribute('onclick', 'window.location.reload()');
 
         let div = document.getElementById("novo");
