@@ -19,6 +19,7 @@ let imagem = 0;
 let posicao;
 
 // manipulando o dom
+// estrutura de repetição para as letras das palavras sorteadas
 for (posicao = 0; posicao < palavra.length; posicao++) {
     // criando variável span e o atribue o elemento span
     let span = document.createElement("span");
@@ -34,21 +35,33 @@ for (posicao = 0; posicao < palavra.length; posicao++) {
 
 // atribuindo uma string com todas a letras do alfabeto
 let alfabeto = "abcdefghijklmnopqrstuvwxyz";
+// lista letras
 // separando as letras da string anterior pelo .split
+// ex.: letras[0]=a | letras[1]=b
 let letras = alfabeto.split("");
 
+// estrutura de repetição para mostrar as letras de botão
 for (posicao = 0; posicao < letras.length; posicao++) {
+    // criando variável botao e o atribue o elemento button
     let botao = document.createElement("button");
+    // põe em letra o texto que está na tal posição da lista letras com o createTextNode
     let letra = document.createTextNode(letras[posicao]);
     
+    // pondo no botão o texto que está em letra 
     botao.appendChild(letra);
+    // onclick para chamar a função escolheLetra cada vez que um botão é clicado
     botao.setAttribute('onclick', 'escolheLetra(\''+letras[posicao]+'\')');
+    // colocando id nos button com a própria letra
+    // ex.: <button onclick="escolheLetra('a')" id="a">a</button>
     botao.setAttribute('id', letras[posicao]);
 
+    // criando variável div e o atribue o elemento que tem o id letras
     let div = document.getElementById("letras");
+    // adicionando o botao dentro da div criada anteriormente com o appenChild
     div.appendChild(botao);
 }
 
+// função
 function escolheLetra(letra) {
 
     let acertou = false;
