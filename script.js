@@ -61,16 +61,22 @@ for (posicao = 0; posicao < letras.length; posicao++) {
     div.appendChild(botao);
 }
 
-// função
+// função para a escolha letra que tem como parâmetro a letra clicada pelo usuário
+// verificar se tem tal letra na palavra em questão
 function escolheLetra(letra) {
 
     let acertou = false;
 
+    // estrutura de repetição para percorrer a palavra
     for (posicao = 0; posicao < palavra.length; posicao++) {
+        // se a letra for encontrada
         if (letra === palavra[posicao]) {
+            // colocamos ela no span onde o id = posicao
             let span = document.getElementById(posicao);
+            // criando variável l para a atribuir a letra em questão
             let l = document.createTextNode(letra);
 
+            // adicionando ao span a letra que está em na variável l
             span.appendChild(l);
 
             let botao = document.getElementById(letra);
