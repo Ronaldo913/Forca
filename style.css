@@ -5,6 +5,8 @@ body {
     margin: 0;
     /* escolha da fonte */
     font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    /* adicionando cor de fundo */
+    background-color: rgb(156, 233, 156);
 }
 
 /* div em que o site está envolvido */
@@ -61,8 +63,14 @@ body {
     justify-content: space-between;
 }
 
+/* onde a forca está */
 #jogo-forca #corpo #jogo #forca{
+    /* colocando padding */
     padding-left: 40px;
+    /* colocando borda */
+    border: solid #0b4619 7px;
+    /* deixando o fundo branco */
+    background-color: white;
 }
 
 /* palavra sorteada */

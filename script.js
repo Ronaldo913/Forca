@@ -86,6 +86,7 @@ function escolheLetra(letra) {
             // removendo o onclick porque a letra já foi escolhida e acertada
             botao.removeAttribute('onclick');
 
+            // acertos vão aumentando
             acertos++;
             acertou = true;
         }
@@ -131,11 +132,15 @@ function escolheLetra(letra) {
         // atribuindo ao botão o onclick com a função de recarregar a página 
         botao.setAttribute('onclick', 'window.location.reload()');
 
+        // criando variável div e atribuindo a ele o elemento ao qual o id = "novo"
         let div = document.getElementById("novo");
+        // adicionando à div a mensagem e o botão
         div.appendChild(mensagem);
         div.appendChild(botao);
     }
 
+    // igualmente a estrutura de decisão anterior
+    // se o número de acertos for igual ao número de letras da palavra entrará na condição
     if (acertos === palavra.length) {
         let mensagem = document.createElement("p");
         let t1 = document.createTextNode("Você venceu!");
